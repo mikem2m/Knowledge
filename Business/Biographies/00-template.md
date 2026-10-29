@@ -10,6 +10,8 @@ era_of_key_moves: "{{e.g. 1987-2000}}"
 scale_today: "{{revenue / employees / outlets, with year and source, or 'unknown'}}"
 researched_on: "{{YYYY-MM-DD}}"
 overall_confidence: "{{high | medium | low}}"
+verification_status: "unverified"  # unverified | partially verified | verified (Michael sets this)
+sources_access: "{{n fetched / n snippet / n via}}"
 tags: [biography, indonesia, {{more}}]
 ---
 
@@ -20,6 +22,8 @@ HOW TO USE THIS TEMPLATE
 - Every section is required. If something is unknown, write "Unknown" and say what would resolve it. Do not fill gaps with plausible-sounding guesses.
 - Tag non-obvious claims inline: (confirmed) = 2+ independent sources or primary source; (reported) = single source; (inference) = my reasoning, not stated by any source.
 - Numbers need a year and a source. Prefer ranges over false precision.
+- Every number, date, quote and non-obvious claim gets a footnote [^key] defined in section 15 with a full URL and access level (fetched / snippet / via).
+- Claims from memory with no source found get (unsourced, verify), never a footnote.
 - Delete these HTML comments in the final file.
 - Target length: 1,500-3,000 words.
 -->
@@ -117,10 +121,21 @@ HOW TO USE THIS TEMPLATE
 <!-- What I could not verify and how to find out (book chapter, filing, interview, person to ask). -->
 
 ## 15. Sources
-| # | Source | Type (autobiography, biography, filing, news, interview, academic) | Language | Reliability (high/med/low) | Used for |
-|---|---|---|---|---|---|
+<!-- Start with: "Access: n fetched / n snippet / n via." Then one footnote definition per line, in this format:
+[^key]: Publisher, "Title", YYYY-MM-DD. <https://...>. Access: fetched | snippet | via. Language: EN | ID. Reliability: high | med | low.
+Group by type if useful: primary (founder interviews, filings, company releases), news, analyst, academic, encyclopedia. -->
+
+Access: {{n}} fetched / {{n}} snippet / {{n}} via.
+
+[^example]: Publisher, "Title", YYYY-MM-DD. <https://example.com>. Access: fetched. Language: EN. Reliability: high.
 
 ## 16. Further reading
 - Books:
 - Interviews / talks / podcasts:
 - Filings and reports:
+
+## 17. Verification log
+<!-- For Michael. Claude leaves this unticked. Record what you checked and what you found. -->
+| Claim / footnote | Checked? | Result (matches / wrong / partly) | Note |
+|---|---|---|---|
+| | [ ] | | |

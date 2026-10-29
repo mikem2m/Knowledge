@@ -42,12 +42,15 @@ Have a real conversation before drafting. Rules:
 - Use listicles and aggregator blogs only to find leads, never as the sole source for a claim.
 - Cross-check every number in at least two sources when possible. If sources conflict, say so and show both.
 - If a page cannot be fetched, say so. Never invent what it probably said.
+- Record for every source how you accessed it: `fetched` (full page read), `snippet` (search-result excerpt only), or `via` (cited by another source, not opened). Prefer fetching the page for any claim that matters.
+- Never cite a URL you did not see in this session. Never construct or guess URLs.
 - If the available evidence is thin, tell Michael before drafting and suggest what to read instead (specific books or filings).
 
 ### Step 3: Draft
 - Fill every section of `00-template.md`. Write "Unknown" instead of guessing.
 - Tag non-obvious claims inline: `(confirmed)` for two or more independent sources or a primary source, `(reported)` for a single source, `(inference)` for your own reasoning.
-- Every figure needs a year and a source in the Sources table.
+- Every figure, date, quote and non-obvious claim needs a Markdown footnote (`[^key]`) pointing to a definition in section 15 with a full URL. See section 7.
+- Claims from your own background knowledge with no source found in this session must be tagged `(unsourced, verify)`. Do not dress them up with a footnote.
 - Put the conversation outcomes in "Discussion notes" in Michael's framing.
 - Keep to roughly 1,500 to 3,000 words unless Michael asks otherwise.
 
@@ -57,6 +60,9 @@ Check each item and fix failures:
 - [ ] At least one failure or near-death moment is covered.
 - [ ] Advantages, luck, and survivorship are addressed honestly.
 - [ ] No unsourced numbers; no invented quotes.
+- [ ] Every number, date and quote has a footnote, and every footnote definition has a working URL and an access level.
+- [ ] Claims resting only on `snippet` or `via` sources are listed in section 14 (Open questions) or marked (reported).
+- [ ] No footnote supports more than the source actually says (e.g. a target is not reported as an achievement).
 - [ ] Controversies are included fairly and proportionately.
 - [ ] Section 12 contains specific actions and "do not copy" items.
 - [ ] Open questions list what could not be verified.
@@ -70,6 +76,7 @@ Check each item and fix failures:
 ## 4. Rules
 
 - **Accuracy over completeness.** Unknown is an acceptable answer. Fabrication is not.
+- **Verifiability.** Michael must be able to check any claim in under a minute by clicking its footnote. Follow section 7.
 - **Copyright.** Paraphrase. Quote at most a short phrase (under 15 words) and at most once per source. Never reproduce passages, and put summaries in your own structure and words.
 - **No legal or financial advice.** You can explain concepts and structures. For anything that affects a real deal, tell Michael to confirm with an Indonesian lawyer or notaris and an accountant.
 - **Private individuals.** Stick to public, well-documented information about public business figures. Do not speculate about family or health beyond what is relevant and documented.
@@ -90,3 +97,15 @@ Check each item and fix failures:
 ## 6. Definition of done
 
 A biography is done when Michael could explain to another person, without notes, how this business made money, how it was financed, what almost killed it, what luck and advantages were involved, and what he would do differently in his own situation.
+
+## 7. Citation and verification rules
+
+- Use Markdown footnotes with short readable keys, e.g. `...for about 80%[^kontan-angel]`. Put one or more footnotes directly after the claim they support, not at the end of a paragraph.
+- Define every footnote in section 15 using this exact format:
+  `[^key]: Publisher, "Title", date. <URL>. Access: fetched | snippet | via. Language: EN | ID | other. Reliability: high | med | low.`
+- One source can support many claims; reuse its key.
+- If two sources conflict, cite both on the same line and state the conflict.
+- Inline confidence tags still apply: `(confirmed)` needs two independent footnotes or one primary source; `(reported)` needs one; `(inference)` needs none but must be clearly your reasoning; `(unsourced, verify)` marks anything from memory.
+- Section 15 starts with a one-line count: how many sources were fetched in full vs snippet vs via.
+- Section 17 (Verification log) is for Michael. Leave the table rows unticked; do not mark anything verified yourself.
+- Copyright still applies: footnotes point to the source, they do not replace paraphrasing. Do not paste passages into footnotes.
